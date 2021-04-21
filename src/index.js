@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { HashRouter as Router, Route, Link } from "react-router-dom";
+import Layout from './components/Layout/index';
+import Detail from './components/details/index';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <React.StrictMode>
+    <Route exact  path='/' component={Layout}></Route>
+    <Route path='/details' component={Detail}></Route>
+    {/* <Layout /> */}
+  </React.StrictMode>
+</Router>,
   document.getElementById('root')
 );
 

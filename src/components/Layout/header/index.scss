@@ -1,0 +1,25 @@
+.header {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background: white;
+    ul {
+        max-width: 980px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        color: #999;
+    }
+    @media(max-width:980px) {
+        ul {
+            overflow-x: auto;
+        }
+    }
+    ul>li {
+        font-size: 13px;
+        padding: 6px 10px;
+        display: flex;
+        cursor: pointer;
+    }
+    .active {
+        color: #007fff;
+    }
+}
